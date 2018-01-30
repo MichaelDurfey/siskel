@@ -48,8 +48,7 @@ var AppView = Backbone.View.extend({
 
   handleClick: function(e) {
     var field = $(e.target).val();
-    this.collection.sortByField(field);
-    this.render();
+    this.collection.sortByField(field);    
   },
 
   render: function() {
@@ -101,7 +100,6 @@ var MoviesView = Backbone.View.extend({
   initialize: function() {
 
     this.collection.on('sort', function() { 
-      console.log("movies view ChangeD!!!");
       this.render();
     }, this);
   },
